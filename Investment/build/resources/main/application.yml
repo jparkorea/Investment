@@ -1,0 +1,35 @@
+server:
+  port: 8080
+  error:
+    include-exception: false
+    include-stacktrace: never
+    path: '/error'
+
+spring:
+
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: ${DATASOURCE_URL:jdbc:mysql://localhost:3306/mydb?serverTimezone=UTC&characterEncoding=UTF-8}
+    username : ${DATASOURCE_USERNAME:root}
+    password : ${DATASOURCE_PASSWORD:password}
+
+    #url: jdbc:mysql://localhost:3306/smoke?serverTimezone=UTC&characterEncoding=UTF-8
+    #username: smoke # DB 사용자 이름
+    #password: 1q2w3e4r # DB 사용자 패스워드
+
+  devtools:
+    livereload:
+      enabled: true   #livereload 시 활성화
+    restart:
+      enabled: false
+
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQL5InnoDBDialect
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true

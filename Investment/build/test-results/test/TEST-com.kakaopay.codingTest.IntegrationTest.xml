@@ -1,0 +1,870 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kakaopay.codingTest.IntegrationTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2021-03-14T13:47:24" hostname="DESKTOP-N38OCU5" time="0.909">
+  <properties/>
+  <testcase name="userCreateSuccess()" classname="com.kakaopay.codingTest.IntegrationTest" time="0.535"/>
+  <testcase name="investmentDateStrCreateSuccess()" classname="com.kakaopay.codingTest.IntegrationTest" time="0.172"/>
+  <testcase name="orderCreateSuccess()" classname="com.kakaopay.codingTest.IntegrationTest" time="0.078"/>
+  <testcase name="investmentListSuccess()" classname="com.kakaopay.codingTest.IntegrationTest" time="0.063"/>
+  <testcase name="myListSuccess()" classname="com.kakaopay.codingTest.IntegrationTest" time="0.035"/>
+  <testcase name="investmentCreateSuccess()" classname="com.kakaopay.codingTest.IntegrationTest" time="0.021"/>
+  <system-out><![CDATA[22:47:15.350 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating CacheAwareContextLoaderDelegate from class [org.springframework.test.context.cache.DefaultCacheAwareContextLoaderDelegate]
+22:47:15.375 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating BootstrapContext using constructor [public org.springframework.test.context.support.DefaultBootstrapContext(java.lang.Class,org.springframework.test.context.CacheAwareContextLoaderDelegate)]
+22:47:15.432 [Test worker] DEBUG org.springframework.test.context.BootstrapUtils - Instantiating TestContextBootstrapper for test class [com.kakaopay.codingTest.IntegrationTest] from class [org.springframework.boot.test.context.SpringBootTestContextBootstrapper]
+22:47:15.456 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Neither @ContextConfiguration nor @ContextHierarchy found for test class [com.kakaopay.codingTest.IntegrationTest], using SpringBootContextLoader
+22:47:15.465 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.kakaopay.codingTest.IntegrationTest]: class path resource [com/kakaopay/codingTest/IntegrationTest-context.xml] does not exist
+22:47:15.466 [Test worker] DEBUG org.springframework.test.context.support.AbstractContextLoader - Did not detect default resource location for test class [com.kakaopay.codingTest.IntegrationTest]: class path resource [com/kakaopay/codingTest/IntegrationTestContext.groovy] does not exist
+22:47:15.466 [Test worker] INFO org.springframework.test.context.support.AbstractContextLoader - Could not detect default resource locations for test class [com.kakaopay.codingTest.IntegrationTest]: no resource found for suffixes {-context.xml, Context.groovy}.
+22:47:15.468 [Test worker] INFO org.springframework.test.context.support.AnnotationConfigContextLoaderUtils - Could not detect default configuration classes for test class [com.kakaopay.codingTest.IntegrationTest]: IntegrationTest does not declare any static, non-private, non-final, nested classes annotated with @Configuration.
+22:47:15.558 [Test worker] DEBUG org.springframework.test.context.support.ActiveProfilesUtils - Could not find an 'annotation declaring class' for annotation type [org.springframework.test.context.ActiveProfiles] and class [com.kakaopay.codingTest.IntegrationTest]
+22:47:15.663 [Test worker] DEBUG org.springframework.context.annotation.ClassPathScanningCandidateComponentProvider - Identified candidate component class: file [C:\WorkHome\codingTest\build\classes\java\main\com\kakaopay\codingTest\CodingTestApplication.class]
+22:47:15.664 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Found @SpringBootConfiguration com.kakaopay.codingTest.CodingTestApplication for test class com.kakaopay.codingTest.IntegrationTest
+22:47:15.829 [Test worker] DEBUG org.springframework.boot.test.context.SpringBootTestContextBootstrapper - @TestExecutionListeners is not present for class [com.kakaopay.codingTest.IntegrationTest]: using defaults.
+22:47:15.830 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Loaded default TestExecutionListener class names from location [META-INF/spring.factories]: [org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener, org.springframework.test.context.web.ServletTestExecutionListener, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener, org.springframework.test.context.event.ApplicationEventsTestExecutionListener, org.springframework.test.context.support.DependencyInjectionTestExecutionListener, org.springframework.test.context.support.DirtiesContextTestExecutionListener, org.springframework.test.context.transaction.TransactionalTestExecutionListener, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener, org.springframework.test.context.event.EventPublishingTestExecutionListener]
+22:47:15.879 [Test worker] INFO org.springframework.boot.test.context.SpringBootTestContextBootstrapper - Using TestExecutionListeners: [org.springframework.test.context.web.ServletTestExecutionListener@c7f5694, org.springframework.test.context.support.DirtiesContextBeforeModesTestExecutionListener@7a1d8ea7, org.springframework.test.context.event.ApplicationEventsTestExecutionListener@62d03616, org.springframework.boot.test.mock.mockito.MockitoTestExecutionListener@6a5a0ecc, org.springframework.boot.test.autoconfigure.SpringBootDependencyInjectionTestExecutionListener@1ce73ee5, org.springframework.test.context.support.DirtiesContextTestExecutionListener@a99e368, org.springframework.test.context.transaction.TransactionalTestExecutionListener@699a04ab, org.springframework.test.context.jdbc.SqlScriptsTestExecutionListener@530c4b3a, org.springframework.test.context.event.EventPublishingTestExecutionListener@763957a8, org.springframework.boot.test.autoconfigure.restdocs.RestDocsTestExecutionListener@337e68a4, org.springframework.boot.test.autoconfigure.web.client.MockRestServiceServerResetTestExecutionListener@a788d3c, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcPrintOnlyOnFailureTestExecutionListener@3b9c52d2, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverTestExecutionListener@724c61e, org.springframework.boot.test.autoconfigure.webservices.client.MockWebServiceServerTestExecutionListener@47dfb516, org.springframework.boot.test.mock.mockito.ResetMocksTestExecutionListener@980d1bc]
+22:47:15.889 [Test worker] DEBUG org.springframework.test.context.support.AbstractDirtiesContextTestExecutionListener - Before test class: context [DefaultTestContext@1723688b testClass = IntegrationTest, testInstance = [null], testMethod = [null], testException = [null], mergedContextConfiguration = [WebMergedContextConfiguration@666910f8 testClass = IntegrationTest, locations = '{}', classes = '{class com.kakaopay.codingTest.CodingTestApplication}', contextInitializerClasses = '[]', activeProfiles = '{}', propertySourceLocations = '{}', propertySourceProperties = '{org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}', contextCustomizers = set[org.springframework.boot.test.autoconfigure.actuate.metrics.MetricsExportContextCustomizerFactory$DisableMetricExportContextCustomizer@786001d, org.springframework.boot.test.autoconfigure.properties.PropertyMappingContextCustomizer@4b3fa0b3, org.springframework.boot.test.autoconfigure.web.servlet.WebDriverContextCustomizerFactory$Customizer@1e69e688, [ImportsContextCustomizer@e2d7f0 key = [org.springframework.boot.test.autoconfigure.web.servlet.MockMvcAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebClientAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcWebDriverAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.client.servlet.OAuth2ClientAutoConfiguration, org.springframework.boot.autoconfigure.security.oauth2.resource.servlet.OAuth2ResourceServerAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.SecurityFilterAutoConfiguration, org.springframework.boot.autoconfigure.security.servlet.UserDetailsServiceAutoConfiguration, org.springframework.boot.test.autoconfigure.web.servlet.MockMvcSecurityConfiguration]], org.springframework.boot.test.context.filter.ExcludeFilterContextCustomizer@d85bbe9, org.springframework.boot.test.json.DuplicateJsonObjectContextCustomizerFactory$DuplicateJsonObjectContextCustomizer@4d6c921, org.springframework.boot.test.mock.mockito.MockitoContextCustomizer@0, org.springframework.boot.test.web.client.TestRestTemplateContextCustomizer@32b36807, org.springframework.boot.test.context.SpringBootTestArgs@1, org.springframework.boot.test.context.SpringBootTestWebEnvironment@6798149d], resourceBasePath = 'src/main/webapp', contextLoader = 'org.springframework.boot.test.context.SpringBootContextLoader', parent = [null]], attributes = map['org.springframework.test.context.web.ServletTestExecutionListener.activateListener' -> true]], class annotated with @DirtiesContext [false] with mode [null].
+22:47:15.939 [Test worker] DEBUG org.springframework.test.context.support.TestPropertySourceUtils - Adding inlined properties to environment: {spring.jmx.enabled=false, org.springframework.boot.test.context.SpringBootTestContextBootstrapper=true}
+
+???  ??? ?????? ???  ??? ??????  ??????? ???????  ?????? ???   ???
+??? ??????????????? ????????????????????????????????????????? ????
+??????? ??????????????? ???????????   ??????????????????? ???????
+??????? ??????????????? ???????????   ?????????? ????????  ?????
+???  ??????  ??????  ??????  ???????????????     ???  ???   ???
+???  ??????  ??????  ??????  ??? ??????? ???     ???  ???   ???
+
+ ??????? ??????? ??????? ???????   ??? ?????????????????????????????????????????
+?????????????????????????????????  ?????????????????????????????????????????????
+???     ???   ??????  ???????????? ??????  ????  ???   ??????  ????????   ???
+???     ???   ??????  ???????????????????   ???  ???   ??????  ????????   ???
+??????????????????????????????? ???????????????  ???   ????????????????   ???
+ ??????? ??????? ??????? ??????  ????? ???????   ???   ????????????????   ???
+
+
+2021-03-14 22:47:16.517  INFO 14884 --- [    Test worker] com.kakaopay.codingTest.IntegrationTest  : Starting IntegrationTest using Java 1.8.0_211 on DESKTOP-N38OCU5 with PID 14884 (started by JUNKYU PARK in C:\WorkHome\codingTest)
+2021-03-14 22:47:16.520  INFO 14884 --- [    Test worker] com.kakaopay.codingTest.IntegrationTest  : No active profile set, falling back to default profiles: default
+2021-03-14 22:47:17.800  INFO 14884 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2021-03-14 22:47:17.901  INFO 14884 --- [    Test worker] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 88 ms. Found 2 JPA repository interfaces.
+2021-03-14 22:47:18.981  INFO 14884 --- [    Test worker] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-03-14 22:47:19.091  INFO 14884 --- [    Test worker] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.28.Final
+2021-03-14 22:47:19.401  INFO 14884 --- [    Test worker] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-03-14 22:47:19.630  INFO 14884 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-03-14 22:47:19.967  INFO 14884 --- [    Test worker] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-03-14 22:47:20.005  INFO 14884 --- [    Test worker] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+Hibernate: 
+    
+    drop table if exists investment CASCADE 
+Hibernate: 
+    
+    drop table if exists orders CASCADE 
+Hibernate: 
+    
+    drop table if exists user CASCADE 
+Hibernate: 
+    
+    drop sequence if exists hibernate_sequence
+Hibernate: create sequence hibernate_sequence start with 1 increment by 1
+Hibernate: 
+    
+    create table investment (
+       product_id bigint generated by default as identity,
+        current_investing_amount integer,
+        finished_at timestamp not null,
+        invest_status varchar(255),
+        started_at timestamp not null,
+        title varchar(255) not null,
+        total_investing_amount integer not null,
+        primary key (product_id)
+    )
+Hibernate: 
+    
+    create table orders (
+       order_id bigint not null,
+        invest_date timestamp,
+        my_amount integer,
+        product_id bigint,
+        user_id bigint,
+        primary key (order_id)
+    )
+Hibernate: 
+    
+    create table user (
+       user_id bigint not null,
+        investment_amount integer,
+        primary key (user_id)
+    )
+Hibernate: 
+    
+    alter table orders 
+       add constraint FK8tqa32905kaqv7y7ehpmv1q21 
+       foreign key (product_id) 
+       references investment
+Hibernate: 
+    
+    alter table orders 
+       add constraint FKel9kyl84ego2otj2accfd8mr7 
+       foreign key (user_id) 
+       references user
+2021-03-14 22:47:21.515  INFO 14884 --- [    Test worker] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-03-14 22:47:21.535  INFO 14884 --- [    Test worker] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2021-03-14 22:47:23.161  WARN 14884 --- [    Test worker] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2021-03-14 22:47:23.668  INFO 14884 --- [    Test worker] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2021-03-14 22:47:23.797  INFO 14884 --- [    Test worker] o.s.b.a.h2.H2ConsoleAutoConfiguration    : H2 console available at '/h2_db'. Database available at 'jdbc:h2:mem:h2_db'
+2021-03-14 22:47:24.593  INFO 14884 --- [    Test worker] o.s.b.t.m.w.SpringBootMockServletContext : Initializing Spring TestDispatcherServlet ''
+2021-03-14 22:47:24.593  INFO 14884 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Initializing Servlet ''
+2021-03-14 22:47:24.595  INFO 14884 --- [    Test worker] o.s.t.web.servlet.TestDispatcherServlet  : Completed initialization in 2 ms
+2021-03-14 22:47:24.628  INFO 14884 --- [    Test worker] com.kakaopay.codingTest.IntegrationTest  : Started IntegrationTest in 8.68 seconds (JVM running for 12.586)
+Hibernate: 
+    /* load com.kakaopay.codingTest.entity.User */ select
+        user0_.user_id as user_id1_2_0_,
+        user0_.investment_amount as investme2_2_0_ 
+    from
+        user user0_ 
+    where
+        user0_.user_id=?
+Hibernate: 
+    /* insert com.kakaopay.codingTest.entity.User
+        */ insert 
+        into
+            user
+            (investment_amount, user_id) 
+        values
+            (?, ?)
+Hibernate: 
+    /* load com.kakaopay.codingTest.entity.Investment */ select
+        investment0_.product_id as product_1_0_0_,
+        investment0_.current_investing_amount as current_2_0_0_,
+        investment0_.finished_at as finished3_0_0_,
+        investment0_.invest_status as invest_s4_0_0_,
+        investment0_.started_at as started_5_0_0_,
+        investment0_.title as title6_0_0_,
+        investment0_.total_investing_amount as total_in7_0_0_ 
+    from
+        investment investment0_ 
+    where
+        investment0_.product_id=?
+Hibernate: 
+    /* insert com.kakaopay.codingTest.entity.Investment
+        */ insert 
+        into
+            investment
+            (product_id, current_investing_amount, finished_at, invest_status, started_at, title, total_investing_amount) 
+        values
+            (null, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    /* load com.kakaopay.codingTest.entity.User */ select
+        user0_.user_id as user_id1_2_0_,
+        user0_.investment_amount as investme2_2_0_ 
+    from
+        user user0_ 
+    where
+        user0_.user_id=?
+Hibernate: 
+    /* insert com.kakaopay.codingTest.entity.User
+        */ insert 
+        into
+            user
+            (investment_amount, user_id) 
+        values
+            (?, ?)
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /kakaopay/users
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-USER-ID:"2"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.kakaopay.codingTest.controller.InvestController
+           Method = com.kakaopay.codingTest.controller.InvestController#userAdd(Long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"46"]
+     Content type = text/plain;charset=UTF-8
+             Body = 사용자 등록에 성공하였습니다. : 2
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+Hibernate: 
+    /* load com.kakaopay.codingTest.entity.User */ select
+        user0_.user_id as user_id1_2_0_,
+        user0_.investment_amount as investme2_2_0_ 
+    from
+        user user0_ 
+    where
+        user0_.user_id=?
+Hibernate: 
+    /* load com.kakaopay.codingTest.entity.Investment */ select
+        investment0_.product_id as product_1_0_0_,
+        investment0_.current_investing_amount as current_2_0_0_,
+        investment0_.finished_at as finished3_0_0_,
+        investment0_.invest_status as invest_s4_0_0_,
+        investment0_.started_at as started_5_0_0_,
+        investment0_.title as title6_0_0_,
+        investment0_.total_investing_amount as total_in7_0_0_ 
+    from
+        investment investment0_ 
+    where
+        investment0_.product_id=?
+Hibernate: 
+    /* update
+        com.kakaopay.codingTest.entity.Investment */ update
+            investment 
+        set
+            current_investing_amount=?,
+            finished_at=?,
+            invest_status=?,
+            started_at=?,
+            title=?,
+            total_investing_amount=? 
+        where
+            product_id=?
+Hibernate: 
+    /* insert com.kakaopay.codingTest.entity.Investment
+        */ insert 
+        into
+            investment
+            (product_id, current_investing_amount, finished_at, invest_status, started_at, title, total_investing_amount) 
+        values
+            (null, ?, ?, ?, ?, ?, ?)
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /kakaopay/investments
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"98"]
+             Body = {"title":"부동산","investmentAmount":100000,"startedAt":"2021-03-10","finishedAt":"2021-03-21"}
+    Session Attrs = {}
+
+Handler:
+             Type = com.kakaopay.codingTest.controller.InvestController
+           Method = com.kakaopay.codingTest.controller.InvestController#itemAdd(InvestmentRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"42"]
+     Content type = text/plain;charset=UTF-8
+             Body = 부동산 상품이 등록되었습니다.
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+Hibernate: 
+    /* load com.kakaopay.codingTest.entity.User */ select
+        user0_.user_id as user_id1_2_0_,
+        user0_.investment_amount as investme2_2_0_ 
+    from
+        user user0_ 
+    where
+        user0_.user_id=?
+Hibernate: 
+    /* load com.kakaopay.codingTest.entity.Investment */ select
+        investment0_.product_id as product_1_0_0_,
+        investment0_.current_investing_amount as current_2_0_0_,
+        investment0_.finished_at as finished3_0_0_,
+        investment0_.invest_status as invest_s4_0_0_,
+        investment0_.started_at as started_5_0_0_,
+        investment0_.title as title6_0_0_,
+        investment0_.total_investing_amount as total_in7_0_0_ 
+    from
+        investment investment0_ 
+    where
+        investment0_.product_id=?
+Hibernate: 
+    /* update
+        com.kakaopay.codingTest.entity.Investment */ update
+            investment 
+        set
+            current_investing_amount=?,
+            finished_at=?,
+            invest_status=?,
+            started_at=?,
+            title=?,
+            total_investing_amount=? 
+        where
+            product_id=?
+Hibernate: 
+    /* load com.kakaopay.codingTest.entity.Investment */ select
+        investment0_.product_id as product_1_0_0_,
+        investment0_.current_investing_amount as current_2_0_0_,
+        investment0_.finished_at as finished3_0_0_,
+        investment0_.invest_status as invest_s4_0_0_,
+        investment0_.started_at as started_5_0_0_,
+        investment0_.title as title6_0_0_,
+        investment0_.total_investing_amount as total_in7_0_0_ 
+    from
+        investment investment0_ 
+    where
+        investment0_.product_id=?
+Hibernate: 
+    /* insert com.kakaopay.codingTest.entity.Investment
+        */ insert 
+        into
+            investment
+            (product_id, current_investing_amount, finished_at, invest_status, started_at, title, total_investing_amount) 
+        values
+            (null, ?, ?, ?, ?, ?, ?)
+Hibernate: 
+    select
+        user0_.user_id as user_id1_2_0_,
+        user0_.investment_amount as investme2_2_0_ 
+    from
+        user user0_ 
+    where
+        user0_.user_id=?
+Hibernate: 
+    select
+        investment0_.product_id as product_1_0_0_,
+        investment0_.current_investing_amount as current_2_0_0_,
+        investment0_.finished_at as finished3_0_0_,
+        investment0_.invest_status as invest_s4_0_0_,
+        investment0_.started_at as started_5_0_0_,
+        investment0_.title as title6_0_0_,
+        investment0_.total_investing_amount as total_in7_0_0_ 
+    from
+        investment investment0_ 
+    where
+        investment0_.product_id=?
+Hibernate: 
+    select
+        orders0_.user_id as user_id5_1_0_,
+        orders0_.order_id as order_id1_1_0_,
+        orders0_.order_id as order_id1_1_1_,
+        orders0_.invest_date as invest_d2_1_1_,
+        orders0_.product_id as product_4_1_1_,
+        orders0_.my_amount as my_amoun3_1_1_,
+        orders0_.user_id as user_id5_1_1_,
+        investment1_.product_id as product_1_0_2_,
+        investment1_.current_investing_amount as current_2_0_2_,
+        investment1_.finished_at as finished3_0_2_,
+        investment1_.invest_status as invest_s4_0_2_,
+        investment1_.started_at as started_5_0_2_,
+        investment1_.title as title6_0_2_,
+        investment1_.total_investing_amount as total_in7_0_2_ 
+    from
+        orders orders0_ 
+    left outer join
+        investment investment1_ 
+            on orders0_.product_id=investment1_.product_id 
+    where
+        orders0_.user_id=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    /* insert com.kakaopay.codingTest.entity.Order
+        */ insert 
+        into
+            orders
+            (invest_date, product_id, my_amount, user_id, order_id) 
+        values
+            (?, ?, ?, ?, ?)
+Hibernate: 
+    /* update
+        com.kakaopay.codingTest.entity.User */ update
+            user 
+        set
+            investment_amount=? 
+        where
+            user_id=?
+Hibernate: 
+    /* update
+        com.kakaopay.codingTest.entity.Investment */ update
+            investment 
+        set
+            current_investing_amount=?,
+            finished_at=?,
+            invest_status=?,
+            started_at=?,
+            title=?,
+            total_investing_amount=? 
+        where
+            product_id=?
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /kakaopay/orders
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-USER-ID:"1", Content-Length:"31"]
+             Body = {"productId":3,"amount":100000}
+    Session Attrs = {}
+
+Handler:
+             Type = com.kakaopay.codingTest.controller.InvestController
+           Method = com.kakaopay.codingTest.controller.InvestController#invest(Long, OrderRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"61"]
+     Content type = text/plain;charset=UTF-8
+             Body = 100000원을 부동산상품에 투자 완료하였습니다.
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+Hibernate: 
+    /* load com.kakaopay.codingTest.entity.User */ select
+        user0_.user_id as user_id1_2_0_,
+        user0_.investment_amount as investme2_2_0_ 
+    from
+        user user0_ 
+    where
+        user0_.user_id=?
+Hibernate: 
+    /* update
+        com.kakaopay.codingTest.entity.User */ update
+            user 
+        set
+            investment_amount=? 
+        where
+            user_id=?
+Hibernate: 
+    /* load com.kakaopay.codingTest.entity.Investment */ select
+        investment0_.product_id as product_1_0_0_,
+        investment0_.current_investing_amount as current_2_0_0_,
+        investment0_.finished_at as finished3_0_0_,
+        investment0_.invest_status as invest_s4_0_0_,
+        investment0_.started_at as started_5_0_0_,
+        investment0_.title as title6_0_0_,
+        investment0_.total_investing_amount as total_in7_0_0_ 
+    from
+        investment investment0_ 
+    where
+        investment0_.product_id=?
+Hibernate: 
+    /* update
+        com.kakaopay.codingTest.entity.Investment */ update
+            investment 
+        set
+            current_investing_amount=?,
+            finished_at=?,
+            invest_status=?,
+            started_at=?,
+            title=?,
+            total_investing_amount=? 
+        where
+            product_id=?
+Hibernate: 
+    /* select
+        i 
+    from
+        Investment i 
+    where
+        i.startedAt <= current_timestamp 
+        and i.finishedAt >= current_timestamp */ select
+            investment0_.product_id as product_1_0_,
+            investment0_.current_investing_amount as current_2_0_,
+            investment0_.finished_at as finished3_0_,
+            investment0_.invest_status as invest_s4_0_,
+            investment0_.started_at as started_5_0_,
+            investment0_.title as title6_0_,
+            investment0_.total_investing_amount as total_in7_0_ 
+        from
+            investment investment0_ 
+        where
+            investment0_.started_at<=current_timestamp 
+            and investment0_.finished_at>=current_timestamp
+Hibernate: 
+    select
+        orders0_.product_id as product_4_1_0_,
+        orders0_.order_id as order_id1_1_0_,
+        orders0_.order_id as order_id1_1_1_,
+        orders0_.invest_date as invest_d2_1_1_,
+        orders0_.product_id as product_4_1_1_,
+        orders0_.my_amount as my_amoun3_1_1_,
+        orders0_.user_id as user_id5_1_1_,
+        user1_.user_id as user_id1_2_2_,
+        user1_.investment_amount as investme2_2_2_ 
+    from
+        orders orders0_ 
+    left outer join
+        user user1_ 
+            on orders0_.user_id=user1_.user_id 
+    where
+        orders0_.product_id=?
+Hibernate: 
+    select
+        orders0_.product_id as product_4_1_0_,
+        orders0_.order_id as order_id1_1_0_,
+        orders0_.order_id as order_id1_1_1_,
+        orders0_.invest_date as invest_d2_1_1_,
+        orders0_.product_id as product_4_1_1_,
+        orders0_.my_amount as my_amoun3_1_1_,
+        orders0_.user_id as user_id5_1_1_,
+        user1_.user_id as user_id1_2_2_,
+        user1_.investment_amount as investme2_2_2_ 
+    from
+        orders orders0_ 
+    left outer join
+        user user1_ 
+            on orders0_.user_id=user1_.user_id 
+    where
+        orders0_.product_id=?
+Hibernate: 
+    select
+        orders0_.product_id as product_4_1_0_,
+        orders0_.order_id as order_id1_1_0_,
+        orders0_.order_id as order_id1_1_1_,
+        orders0_.invest_date as invest_d2_1_1_,
+        orders0_.product_id as product_4_1_1_,
+        orders0_.my_amount as my_amoun3_1_1_,
+        orders0_.user_id as user_id5_1_1_,
+        user1_.user_id as user_id1_2_2_,
+        user1_.investment_amount as investme2_2_2_ 
+    from
+        orders orders0_ 
+    left outer join
+        user user1_ 
+            on orders0_.user_id=user1_.user_id 
+    where
+        orders0_.product_id=?
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /kakaopay/investments
+       Parameters = {}
+          Headers = []
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.kakaopay.codingTest.controller.InvestController
+           Method = com.kakaopay.codingTest.controller.InvestController#list()
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = [{"productId":1,"title":"?¶??????°","totalInvestingAmount":10000000,"currentInvestingAmount":0,"investStatus":null,"startedAt":"2021-03-14T13:47:25.476+00:00","finishedAt":"2021-04-13T13:47:25.476+00:00","orderIds":0,"myAmount":null,"investDate":null},{"productId":2,"title":"?¶??????°","totalInvestingAmount":100000,"currentInvestingAmount":0,"investStatus":"Y","startedAt":"2021-03-10T00:00:00.000+00:00","finishedAt":"2021-03-21T00:00:00.000+00:00","orderIds":0,"myAmount":null,"investDate":null},{"productId":3,"title":"?¶??????°","totalInvestingAmount":10000000,"currentInvestingAmount":100000,"investStatus":"Y","startedAt":"2021-03-14T13:47:25.402+00:00","finishedAt":"2021-04-13T13:47:25.402+00:00","orderIds":1,"myAmount":null,"investDate":null}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+Hibernate: 
+    /* load com.kakaopay.codingTest.entity.User */ select
+        user0_.user_id as user_id1_2_0_,
+        user0_.investment_amount as investme2_2_0_ 
+    from
+        user user0_ 
+    where
+        user0_.user_id=?
+Hibernate: 
+    /* load com.kakaopay.codingTest.entity.Investment */ select
+        investment0_.product_id as product_1_0_0_,
+        investment0_.current_investing_amount as current_2_0_0_,
+        investment0_.finished_at as finished3_0_0_,
+        investment0_.invest_status as invest_s4_0_0_,
+        investment0_.started_at as started_5_0_0_,
+        investment0_.title as title6_0_0_,
+        investment0_.total_investing_amount as total_in7_0_0_ 
+    from
+        investment investment0_ 
+    where
+        investment0_.product_id=?
+Hibernate: 
+    /* update
+        com.kakaopay.codingTest.entity.Investment */ update
+            investment 
+        set
+            current_investing_amount=?,
+            finished_at=?,
+            invest_status=?,
+            started_at=?,
+            title=?,
+            total_investing_amount=? 
+        where
+            product_id=?
+Hibernate: 
+    select
+        user0_.user_id as user_id1_2_0_,
+        user0_.investment_amount as investme2_2_0_ 
+    from
+        user user0_ 
+    where
+        user0_.user_id=?
+Hibernate: 
+    select
+        investment0_.product_id as product_1_0_0_,
+        investment0_.current_investing_amount as current_2_0_0_,
+        investment0_.finished_at as finished3_0_0_,
+        investment0_.invest_status as invest_s4_0_0_,
+        investment0_.started_at as started_5_0_0_,
+        investment0_.title as title6_0_0_,
+        investment0_.total_investing_amount as total_in7_0_0_ 
+    from
+        investment investment0_ 
+    where
+        investment0_.product_id=?
+Hibernate: 
+    select
+        orders0_.user_id as user_id5_1_0_,
+        orders0_.order_id as order_id1_1_0_,
+        orders0_.order_id as order_id1_1_1_,
+        orders0_.invest_date as invest_d2_1_1_,
+        orders0_.product_id as product_4_1_1_,
+        orders0_.my_amount as my_amoun3_1_1_,
+        orders0_.user_id as user_id5_1_1_,
+        investment1_.product_id as product_1_0_2_,
+        investment1_.current_investing_amount as current_2_0_2_,
+        investment1_.finished_at as finished3_0_2_,
+        investment1_.invest_status as invest_s4_0_2_,
+        investment1_.started_at as started_5_0_2_,
+        investment1_.title as title6_0_2_,
+        investment1_.total_investing_amount as total_in7_0_2_ 
+    from
+        orders orders0_ 
+    left outer join
+        investment investment1_ 
+            on orders0_.product_id=investment1_.product_id 
+    where
+        orders0_.user_id=?
+Hibernate: 
+    call next value for hibernate_sequence
+Hibernate: 
+    /* insert com.kakaopay.codingTest.entity.Order
+        */ insert 
+        into
+            orders
+            (invest_date, product_id, my_amount, user_id, order_id) 
+        values
+            (?, ?, ?, ?, ?)
+Hibernate: 
+    /* update
+        com.kakaopay.codingTest.entity.User */ update
+            user 
+        set
+            investment_amount=? 
+        where
+            user_id=?
+Hibernate: 
+    /* update
+        com.kakaopay.codingTest.entity.Investment */ update
+            investment 
+        set
+            current_investing_amount=?,
+            finished_at=?,
+            invest_status=?,
+            started_at=?,
+            title=?,
+            total_investing_amount=? 
+        where
+            product_id=?
+Hibernate: 
+    select
+        user0_.user_id as user_id1_2_0_,
+        user0_.investment_amount as investme2_2_0_ 
+    from
+        user user0_ 
+    where
+        user0_.user_id=?
+Hibernate: 
+    select
+        orders0_.user_id as user_id5_1_0_,
+        orders0_.order_id as order_id1_1_0_,
+        orders0_.order_id as order_id1_1_1_,
+        orders0_.invest_date as invest_d2_1_1_,
+        orders0_.product_id as product_4_1_1_,
+        orders0_.my_amount as my_amoun3_1_1_,
+        orders0_.user_id as user_id5_1_1_,
+        investment1_.product_id as product_1_0_2_,
+        investment1_.current_investing_amount as current_2_0_2_,
+        investment1_.finished_at as finished3_0_2_,
+        investment1_.invest_status as invest_s4_0_2_,
+        investment1_.started_at as started_5_0_2_,
+        investment1_.title as title6_0_2_,
+        investment1_.total_investing_amount as total_in7_0_2_ 
+    from
+        orders orders0_ 
+    left outer join
+        investment investment1_ 
+            on orders0_.product_id=investment1_.product_id 
+    where
+        orders0_.user_id=?
+
+MockHttpServletRequest:
+      HTTP Method = GET
+      Request URI = /kakaopay/user/investments
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", X-USER-ID:"1"]
+             Body = null
+    Session Attrs = {}
+
+Handler:
+             Type = com.kakaopay.codingTest.controller.InvestController
+           Method = com.kakaopay.codingTest.controller.InvestController#detail(Long)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 200
+    Error message = null
+          Headers = [Content-Type:"application/json"]
+     Content type = application/json
+             Body = [{"productId":3,"title":"?¶??????°","totalInvestingAmount":10000000,"currentInvestingAmount":null,"investStatus":null,"startedAt":null,"finishedAt":null,"orderIds":null,"myAmount":0,"investDate":"2021-03-14T13:47:25.447+00:00"},{"productId":2,"title":"?¶??????°","totalInvestingAmount":100000,"currentInvestingAmount":null,"investStatus":null,"startedAt":null,"finishedAt":null,"orderIds":null,"myAmount":0,"investDate":"2021-03-14T13:47:25.550+00:00"}]
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+Hibernate: 
+    /* load com.kakaopay.codingTest.entity.User */ select
+        user0_.user_id as user_id1_2_0_,
+        user0_.investment_amount as investme2_2_0_ 
+    from
+        user user0_ 
+    where
+        user0_.user_id=?
+Hibernate: 
+    /* update
+        com.kakaopay.codingTest.entity.User */ update
+            user 
+        set
+            investment_amount=? 
+        where
+            user_id=?
+Hibernate: 
+    /* load com.kakaopay.codingTest.entity.Investment */ select
+        investment0_.product_id as product_1_0_0_,
+        investment0_.current_investing_amount as current_2_0_0_,
+        investment0_.finished_at as finished3_0_0_,
+        investment0_.invest_status as invest_s4_0_0_,
+        investment0_.started_at as started_5_0_0_,
+        investment0_.title as title6_0_0_,
+        investment0_.total_investing_amount as total_in7_0_0_ 
+    from
+        investment investment0_ 
+    where
+        investment0_.product_id=?
+Hibernate: 
+    /* update
+        com.kakaopay.codingTest.entity.Investment */ update
+            investment 
+        set
+            current_investing_amount=?,
+            finished_at=?,
+            invest_status=?,
+            started_at=?,
+            title=?,
+            total_investing_amount=? 
+        where
+            product_id=?
+Hibernate: 
+    /* insert com.kakaopay.codingTest.entity.Investment
+        */ insert 
+        into
+            investment
+            (product_id, current_investing_amount, finished_at, invest_status, started_at, title, total_investing_amount) 
+        values
+            (null, ?, ?, ?, ?, ?, ?)
+
+MockHttpServletRequest:
+      HTTP Method = POST
+      Request URI = /kakaopay/investments
+       Parameters = {}
+          Headers = [Content-Type:"application/json;charset=UTF-8", Content-Length:"136"]
+             Body = {"title":"부동산","investmentAmount":100000,"startedAt":"2021-03-14T13:47:25.579+00:00","finishedAt":"2021-04-13T13:47:25.579+00:00"}
+    Session Attrs = {}
+
+Handler:
+             Type = com.kakaopay.codingTest.controller.InvestController
+           Method = com.kakaopay.codingTest.controller.InvestController#itemAdd(InvestmentRequest)
+
+Async:
+    Async started = false
+     Async result = null
+
+Resolved Exception:
+             Type = null
+
+ModelAndView:
+        View name = null
+             View = null
+            Model = null
+
+FlashMap:
+       Attributes = null
+
+MockHttpServletResponse:
+           Status = 201
+    Error message = null
+          Headers = [Content-Type:"text/plain;charset=UTF-8", Content-Length:"42"]
+     Content type = text/plain;charset=UTF-8
+             Body = 부동산 상품이 등록되었습니다.
+    Forwarded URL = null
+   Redirected URL = null
+          Cookies = []
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

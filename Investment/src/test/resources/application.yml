@@ -1,0 +1,33 @@
+server:
+  port: 8080
+  error:
+    include-exception: false
+    include-stacktrace: never
+    path: '/error'
+
+spring:
+  h2:
+    console:
+      enabled: true
+      path: /h2_db
+
+  datasource:
+    driver-class-name: org.h2.Driver
+    url: jdbc:h2:mem:h2_db
+
+  devtools:
+    livereload:
+      enabled: true   #livereload 시 활성화
+    restart:
+      enabled: false
+
+  jpa:
+    database: H2
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        show_sql: true
+        use_sql_comments: true
+        format_sql: true

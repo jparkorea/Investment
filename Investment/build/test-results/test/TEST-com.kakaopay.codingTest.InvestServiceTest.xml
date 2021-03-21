@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="com.kakaopay.codingTest.InvestServiceTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2021-03-14T13:47:25" hostname="DESKTOP-N38OCU5" time="0.445">
+  <properties/>
+  <testcase name="itemAddSuccess()" classname="com.kakaopay.codingTest.InvestServiceTest" time="0.301"/>
+  <testcase name="soldOutException()" classname="com.kakaopay.codingTest.InvestServiceTest" time="0.101"/>
+  <testcase name="investSuccess()" classname="com.kakaopay.codingTest.InvestServiceTest" time="0.007"/>
+  <testcase name="list()" classname="com.kakaopay.codingTest.InvestServiceTest" time="0.016"/>
+  <testcase name="returnEmptyList()" classname="com.kakaopay.codingTest.InvestServiceTest" time="0.003"/>
+  <testcase name="userAddSuccess()" classname="com.kakaopay.codingTest.InvestServiceTest" time="0.002"/>
+  <testcase name="getUserInfoSuccess()" classname="com.kakaopay.codingTest.InvestServiceTest" time="0.01"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
