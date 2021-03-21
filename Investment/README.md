@@ -1,6 +1,6 @@
 <a name="top">
 
-# 카카오페이 코딩테스트
+# 부동산/신용 투자 서비스 API 개발
 
 </a>
 
@@ -69,8 +69,6 @@
 
 ### 4. 의존성
 </a>
-
-![dependencies]
 
  > dependency
  - spring-web : 톰캣, webmvc 등
